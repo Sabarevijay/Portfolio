@@ -1,0 +1,121 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.services-title {
+  position: relative;
+  text-align: center;
+}
+
+.services-title h1 {
+  padding: 0 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.services-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* Description */
+.para {
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Services Grid */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 100px;
+  width: 80%;
+  margin-bottom: 80px;
+}
+
+.services-container img {
+  width: 80%;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.services-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(255, 0, 255, 0.5);
+  cursor: pointer;
+}
+
+/* Skill Cards */
+.skill-card {
+  width: 50%;
+  padding: 1.25rem 1.5rem;
+  max-height: 20rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.skill-card:hover {
+  color: white;
+  transform: scale(1.2);
+  filter: drop-shadow(0 20px 50px rgba(8, 112, 184, 0.7));
+}
+
+.skill-text {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  .services-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+      align-items: start;
+      gap: 70px;
+      margin: 20px 70px;
+  }
+
+  .services-title h1 {
+      font-size: 50px;
+      padding: 0;
+  }
+
+  .services-title img {
+      width: 130px;
+      margin-right: -20px;
+  }
+
+  .services-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+  }
+
+  .skill-card {
+      width: 33.333%;
+      padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skill-card {
+      width: 50%;
+  }
+}
