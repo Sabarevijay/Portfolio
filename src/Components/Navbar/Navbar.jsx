@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className='navbar'>
         {/* <img src={logo} alt="" /> */}
         <h1 className='name'>Sabare vijay</h1>
-        <img className='logo' src={theme_pattern} alt="" />
+        {/* <img className='logo' src={theme_pattern} alt="" /> */}
         <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
         <ul ref={menuRef} className="nav-menu">
           <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />

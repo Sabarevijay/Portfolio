@@ -8,19 +8,21 @@
     background: #53324c;
     width: 100%;
     top: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
     left: 0;
     z-index: 1000;
     box-sizing: border-box;
     
 }
 .logo{
-    position: fixed;
-    width: 100px; /* Adjust this value as needed */
-    height: 100px; /* Adjust this value as needed */
-    z-index: -1;
+    position: fixed; /* Change from fixed to absolute */
+    width: 100px;
+    height: 100px;
+    z-index: 1; /* Ensure it's above other elements but below the menu */
     top: 10px;
-    right:220px;
- 
+    right: 50%; /* Center horizontally */
+    transform: translateX(50%);
     
 }
 .nav-menu{
@@ -67,7 +69,9 @@
 
 @media(max-width:768px){
     .navbar{
-        margin: 20px 50px;
+        /* margin: 20px 50px; */
+        padding-top: 40px;
+        padding-bottom: 40px;
         position: relative;
     }
     
@@ -94,6 +98,148 @@
         left: 290px;
         width: 30px;
 
+    }.navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        position: fixed;
+        background: #53324c;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+    
+    .logo {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        z-index: 1001;
+        top: 10px;
+        left: 20px;
+    }
+    
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        font-size: 16px;
+    }
+    
+    .nav-connect {
+        padding: 12px 24px;
+        border-radius: 50px;
+        background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .nav-connect:hover {
+        transform: scale(1.05);
+    }
+    
+    .nav-menu li {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+    
+    .anchor-link {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .nav-mob-close {
+        display: none;
+    }
+    
+    .nav-mob-open {
+        display: none;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 10px 15px;
+        }
+    
+        .logo {
+            width: 40px;
+            height: 40px;
+            left: 15px;
+            top: 15px;
+        }
+    
+        .nav-connect {
+            display: none;
+        }
+    
+        .nav-mob-open {
+            display: block;
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            z-index: 1002;
+            width: 30px;
+            height: 30px;
+        }
+    
+        .nav-mob-close {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1002;
+            width: 30px;
+            height: 30px;
+        }
+    
+        .nav-menu {
+            position: fixed;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0;
+            right: -350px;
+            width: 250px;
+            height: 100%;
+            background-color: #1f0016;
+            z-index: 1000;
+            transition: 0.3s;
+            padding-top: 80px;
+            gap: 30px;
+        }
+    
+        .nav-menu li {
+            width: 100%;
+            padding-left: 30px;
+            font-size: 20px;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    
+    /* Additional responsiveness for very small screens */
+    @media (max-width: 375px) {
+        .nav-menu {
+            width: 100%;
+            right: -100%;
+        }
+    
+        .logo {
+            width: 35px;
+            height: 35px;
+            left: 10px;
+        }
+    
+        .nav-menu li {
+            font-size: 18px;
+            padding-left: 20px;
+        }
     }
     .nav-menu{
         position: fixed;
