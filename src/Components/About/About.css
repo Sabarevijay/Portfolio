@@ -128,3 +128,57 @@
         display: none;
     }
 }
+@media (max-width: 360px) {
+    .about {
+        margin: 40px 15px;
+        gap: 40px;
+    }
+
+    .about-title h1 {
+        font-size: 24px;
+        padding: 0px 5px;
+    }
+
+    .about-title img {
+        width: 60px;
+    }
+
+    .about-sections {
+        gap: 20px;
+    }
+
+    .about-right {
+        gap: 30px;
+    }
+
+    .about-para {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .about-skill {
+        gap: 15px;
+    }
+
+    .about-skill p {
+        min-width: 80px;
+        font-size: 14px;
+    }
+
+    .about-skill hr {
+        height: 3px;
+    }
+
+    .about-achievements {
+        margin-bottom: 30px;
+        gap: 15px;
+    }
+
+    .about-achievement h1 {
+        font-size: 24px;
+    }
+
+    .about-achievement p {
+        font-size: 12px;
+    }
+}

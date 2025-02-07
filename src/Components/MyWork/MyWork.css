@@ -28,9 +28,9 @@
 
 .mywork-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 3fr));
   gap: 40px;
-  width: 100%;
+  width: 200%;
 }
 
 .work-item {
@@ -109,6 +109,7 @@
 @media (max-width: 768px) {
   .mywork-container {
       grid-template-columns: 1fr;
+      gap: 20px;
   }
   
   .mywork-showmore {
@@ -121,15 +122,31 @@
       height: 250px;
   }
 }
-
-
-
-.mywork-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  width: 200%;
+@media (max-width: 360px) {
+  .work-card {
+    height: 100px;
+   /* margin-left: 70px; */
+    
+  }
+  
+  .mywork {
+    margin: 10px;
+    width: 95%;
+  }
+  
+  .mywork-title h1 {
+    font-size: 28px;
+  }
+  .mywork-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
+
+
+
+
 
 @media (max-width: 1200px) {
   .mywork-container {
@@ -138,7 +155,7 @@
   }
   
   .work-card {
-      height: 220px;
+      height: 200px;
   }
 }
 
