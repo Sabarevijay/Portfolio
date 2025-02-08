@@ -2,20 +2,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: clamp(20px, 3vw, 35px);
+    gap: clamp(15px, 3vw, 35px);
 }
 
 .hero img {
-    margin-top: clamp(80px, 12vw, 150px);
-    width: clamp(260px, 35vw, 400px);
-    height: clamp(260px, 35vw, 400px);
+    margin-top: clamp(60px, 10vw, 140px);
+    width: clamp(220px, 30vw, 380px);
+    height: clamp(220px, 30vw, 380px);
     border-radius: 50%;
 }
 
 .hero h1 {
     text-align: center;
-    width: 70%;
-    font-size: clamp(40px, 7vw, 90px);
+    width: clamp(80%, 60vw, 70%);
+    font-size: clamp(36px, 6vw, 80px);
     font-weight: 600;
 }
 
@@ -27,33 +27,33 @@
 }
 
 .hero p {
-    width: clamp(60%, 50vw, 50%);
+    width: clamp(70%, 50vw, 55%);
     text-align: center;
-    font-size: clamp(16px, 2.2vw, 24px);
-    line-height: clamp(28px, 3vw, 40px);
+    font-size: clamp(15px, 2vw, 22px);
+    line-height: clamp(26px, 2.8vw, 38px);
 }
 
 .hero-action {
     display: flex;
     align-items: center;
-    gap: clamp(16px, 6vw, 100px);
-    font-size: clamp(18px, 2.2vw, 24px);
+    gap: clamp(14px, 5vw, 90px);
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: clamp(30px, 4vw, 50px);
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .hero-connect {
-    padding: clamp(20px, 2vw, 25px) clamp(30px, 3vw, 45px);
-    border-radius: clamp(40px, 4vw, 50px);
+    padding: clamp(16px, 1.8vw, 24px) clamp(26px, 3vw, 40px);
+    border-radius: clamp(30px, 4vw, 45px);
     background: linear-gradient(264deg, #df8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
 }
 
 .hero-resume a {
-    padding: clamp(20px, 2vw, 25px) clamp(50px, 5vw, 75px);
-    border-radius: clamp(40px, 4vw, 50px);
+    padding: clamp(16px, 1.8vw, 24px) clamp(40px, 5vw, 70px);
+    border-radius: clamp(30px, 4vw, 45px);
     border: 2px solid #fff;
     text-decoration: none;
     color: #fff;
@@ -69,43 +69,49 @@
     border-color: #B415FF;
 }
 
-@media (max-width: 768px) {
+/* Tablets and Medium Screens */
+@media (max-width: 1024px) {
     .hero h1 {
-        margin-top: 50px;
+        margin-top: 40px;
     }
     
     .hero p {
-        margin: 10px 0px;
+        margin: 8px 0px;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(28px, 5vw, 50px);
+        width: 80%;
+    }
+
+    .hero p {
+        width: 85%;
+    }
+
     .hero-action {
         flex-direction: column;
-        width: 100%;
-        align-items: stretch;
-    }
-    
-    .hero-connect,
-    .hero-resume a {
-        text-align: center;
+        gap: 20px;
     }
 }
-@media (max-width: 360px) {
+
+/* Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
     .hero {
-        gap: 15px;
+        gap: 12px;
     }
 
     .hero img {
-        margin-top: 40px;
-        width: 200px;
-        height: 200px;
+        margin-top: 50px;
+        width: 180px;
+        height: 180px;
     }
 
     .hero h1 {
         width: 90%;
-        font-size: 28px;
-        margin-top: 30px;
+        font-size: 26px;
     }
 
     .hero p {
@@ -119,17 +125,48 @@
         gap: 15px;
         font-size: 16px;
         margin-bottom: 30px;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .hero-connect {
-        padding: 15px 25px;
+        padding: 14px 20px;
         border-radius: 25px;
     }
 
     .hero-resume a {
-
-        padding: 15px 125px;
+        padding: 14px 30px;
         border-radius: 25px;
+        text-align: center;
+    }
+}
+
+/* Ultra Small Screens (Below 360px) */
+@media (max-width: 360px) {
+    .hero img {
+        margin-top: 30px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .hero p {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .hero-action {
+        gap: 12px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .hero-connect,
+    .hero-resume a {
+        padding: 12px 18px;
+        border-radius: 20px;
     }
 }

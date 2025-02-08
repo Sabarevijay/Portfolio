@@ -1,46 +1,47 @@
 .footer {
-    margin: clamp(30px, 5vw, 50px) clamp(20px, 10vw, 170px);
+    margin: clamp(20px, 5vw, 50px) clamp(15px, 8vw, 150px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(20px, 3vw, 30px);
+    gap: clamp(15px, 3vw, 30px);
 }
 
 .logo {
     position: relative;
-    width: clamp(60px, 8vw, 100px);
-    height: clamp(60px, 8vw, 100px);
+    width: clamp(50px, 7vw, 90px);
+    height: clamp(50px, 7vw, 90px);
     z-index: -1;
-    top: 10px;
-    right: clamp(100px, 15vw, 220px);
+    top: 8px;
+    right: clamp(80px, 12vw, 200px);
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: clamp(30px, 4vw, 50px);
+    gap: clamp(20px, 4vw, 40px);
 }
 
 .footer-left p {
-    font-size: clamp(16px, 2vw, 20px);
-    max-width: 400px;
+    font-size: clamp(14px, 1.8vw, 18px);
+    max-width: 380px;
 }
 
 .footer-top-right {
     display: flex;
     align-items: center;
-    gap: clamp(20px, 3vw, 35px);
+    gap: clamp(15px, 3vw, 30px);
     flex-wrap: wrap;
 }
 
 .footer-email-input {
     display: flex;
-    gap: clamp(15px, 2vw, 30px);
-    padding: clamp(15px, 2vw, 20px) clamp(20px, 3vw, 30px);
+    gap: clamp(10px, 2vw, 25px);
+    padding: clamp(10px, 2vw, 18px) clamp(15px, 3vw, 25px);
     border-radius: 50px;
     background: #32323b;
-    padding-right: clamp(40px, 5vw, 80px);
+    width: 100%;
+    max-width: 450px;
 }
 
 .footer-email-input input {
@@ -49,14 +50,14 @@
     background: transparent;
     color: #a0a0a0;
     font-family: Outfit;
-    font-size: clamp(14px, 1.8vw, 18px);
+    font-size: clamp(13px, 1.6vw, 17px);
     width: 100%;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .footer-subscribe {
-    font-size: clamp(16px, 2vw, 20px);
-    padding: clamp(15px, 2vw, 22px) clamp(30px, 4vw, 50px);
+    font-size: clamp(14px, 1.8vw, 18px);
+    padding: clamp(12px, 2vw, 20px) clamp(25px, 4vw, 45px);
     border-radius: 50px;
     background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
     cursor: pointer;
@@ -67,15 +68,15 @@
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: clamp(14px, 1.8vw, 18px);
+    font-size: clamp(13px, 1.6vw, 17px);
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 }
 
 .footer-bottom-right {
     display: flex;
-    gap: clamp(20px, 4vw, 50px);
-    margin-bottom: clamp(30px, 4vw, 50px);
+    gap: clamp(15px, 3vw, 40px);
+    margin-bottom: clamp(20px, 3vw, 40px);
     flex-wrap: wrap;
 }
 
@@ -84,10 +85,11 @@
 }
 
 .footer-subscribe:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
 }
 
+/* Tablets and Medium Screens */
 @media (max-width: 1024px) {
     .footer-top-right {
         width: 100%;
@@ -95,15 +97,17 @@
     }
     
     .footer-email-input {
-        width: 100%;
-        max-width: 500px;
+        max-width: 400px;
         justify-content: space-between;
     }
 }
 
+/* Mobile Screens */
 @media (max-width: 768px) {
     .footer-top {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .footer-bottom {
@@ -114,5 +118,29 @@
     
     .footer-bottom-right {
         justify-content: center;
+    }
+
+    .footer-email-input {
+        width: 90%;
+    }
+}
+
+/* Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
+    .footer-email-input {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .footer-subscribe {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        right: auto;
+        top: 5px;
     }
 }
