@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="hero-resume">
           <a
             target="blank"
-            href="https://drive.google.com/file/d/1N1dRfhL8xHPU2n2W1V_-thsX5wsBImMK/view?usp=sharing"
+            href="https://drive.google.com/file/d/1a_eaDvOC-Yw_0DzmDeY9gsBLz2ucieyi/view?usp=sharing"
           >
             {" "}
             My Resume
